@@ -1,31 +1,32 @@
 md-tabs.md-THEME_NAME-theme {
-  .md-header {
+  md-tab-wrapper {
     background-color: transparent;
+    border-color: '{{foreground-4}}';
   }
   .md-paginator md-icon {
     color: '{{primary-color}}';
   }
 
   &.md-accent {
-    .md-header {
+    md-tab-wrapper {
       background-color: '{{accent-color}}';
     }
 
     md-tab:not([disabled]) {
       color: '{{accent-100}}';
-      &.active {
+      &.md-active, &.md-focus {
         color: '{{accent-contrast}}';
       }
     }
   }
 
   &.md-primary {
-    .md-header {
+    md-tab-wrapper {
       background-color: '{{primary-color}}';
     }
     md-tab:not([disabled]) {
       color: '{{primary-100}}';
-      &.active {
+      &.md-active, &.md-focus {
         color: '{{primary-contrast}}';
       }
     }
@@ -38,7 +39,7 @@ md-tabs.md-THEME_NAME-theme {
         color: '{{primary-contrast}}';
         background-color: '{{primary-contrast-0.1}}';
       }
-      &.active {
+      &.md-active, &.md-focus {
         color: '{{primary-contrast}}';
       }
       .md-ripple-container {
@@ -48,25 +49,24 @@ md-tabs.md-THEME_NAME-theme {
   }
 
   &.md-warn {
-    .md-header {
+    md-tab-wrapper {
       background-color: '{{warn-color}}';
     }
 
     md-tab:not([disabled]) {
       color: '{{warn-100}}';
-      &.active {
+      &.md-active, &.md-focus {
         color: '{{warn-contrast}}';
       }
     }
   }
 
-
-  md-tabs-ink-bar {
+  md-ink-bar {
     color: '{{accent-color}}';
     background: '{{accent-color}}';
   }
 
-  md-tab {
+  .md-tab {
     color: '{{foreground-2}}';
     &[disabled] {
       color: '{{foreground-3}}';
@@ -74,7 +74,7 @@ md-tabs.md-THEME_NAME-theme {
     &:focus {
       color: '{{foreground-1}}';
     }
-    &.active {
+    &.md-active, &.md-focus {
       color: '{{primary-color}}';
     }
     .md-ripple-container {
